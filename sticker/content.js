@@ -14,7 +14,7 @@
 	// 
 	chrome.extension.onRequest.addListener(function(request, sender, sendResponse){
 		$("body").append(template);
-		$document.find(sticker).addClass(request.color).draggable();
+		$document.find(sticker).filter(":last").addClass(request.color).draggable();
 	});
 
 	// delete sticker
